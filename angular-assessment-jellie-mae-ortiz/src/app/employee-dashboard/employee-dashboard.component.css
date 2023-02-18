@@ -1,0 +1,20 @@
+.form-component{
+    padding: 20px 10px;
+    margin: 5%;
+    background-color: #f4f4f4;
+}
+.formtable{
+    margin: 5%;
+    padding: 10px;
+}
+.navbar{
+    background-color: green;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border:1px solid red;
+}
+
+.form-control.ng-touched.ng-valid{
+    border:1px solid green;
+}

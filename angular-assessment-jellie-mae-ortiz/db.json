@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 4,
+      "name": "Charles",
+      "email": "charles.lacanilao01@gmail.com",
+      "mobile": "09475873586"
+    },
+    {
+      "id": 5,
+      "name": "Luis",
+      "email": "luis.rubin@gmail.com",
+      "mobile": "09243554354"
+    },
+    {
+      "id": 6,
+      "name": "Celso",
+      "email": "celso.capati@gmail.com",
+      "mobile": "094343543646"
+    },
+    {
+      "id": 7,
+      "name": "Krisanta",
+      "email": "krisanta@gmail.com",
+      "mobile": "093335453"
+    },
+    {
+      "id": 8,
+      "name": "Jellie",
+      "email": "jellie@gmail.com",
+      "mobile": "98434343"
+    }
+  ],
+  "comments": [
+    {
+      "id": 2,
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test@gmail.com",
+      "mobile": "123456789",
+      "salary": "10000"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

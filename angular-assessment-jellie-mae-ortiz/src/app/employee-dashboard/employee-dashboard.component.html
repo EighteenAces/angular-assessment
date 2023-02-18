@@ -1,0 +1,53 @@
+<nav class="navbar">
+    <div class="container fluid">
+        <h1 style="color: aliceblue;">Employee Contact Information</h1>
+    </div>
+</nav>
+<div class="form-component">
+  <form [formGroup]="formValue">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small *ngIf="name?.invalid  && name?.touched" class="text-danger">*Name is required. Kindly fill out this field.</small>
+    </div>
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email Address</label>
+          <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small *ngIf="email?.invalid && email?.touched" class="text-danger">*Email Address is required. Kindly fill out this field with valid email address.</small>
+        </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contact</label>
+        <input type="text" formControlName="contact" class="form-control" id="exampleInputPassword1">
+        <small *ngIf="contact?.invalid && contact?.touched" class="text-danger">*Contact is required. Kindly fill out this field.</small>
+    </div>
+    <button [disabled]="formValue.invalid" type="button"  (click)="postEmployeeDetails()" class="btn btn-success">Add</button>
+    <button [disabled]="formValue.invalid" type="button" *ngIf="showUpdate" (click)="updateEmployeeDetails()" class="btn btn-warning mx-2">Update</button>
+  </form>
+</div>
+<div class="formtable">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Employee ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Mobile No.</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let row of employeeData">
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td>
+                <td>{{row.email}}</td>
+                <td>{{row.contact}}</td>
+                <td>
+                    <button routerLink='/view' id="btn-view" (click)="viewList(row)" class="btn btn-primary mx-2">View</button>
+                    <button (click)="onEdit(row)"type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="btn btn-warning mx-2">Edit</button>
+                    <button (click)="deleteEmployee(row)" class="btn btn-danger mx-1">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+</div>
+

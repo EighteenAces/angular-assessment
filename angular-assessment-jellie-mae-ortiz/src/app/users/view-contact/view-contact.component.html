@@ -1,0 +1,27 @@
+
+<nav class="navbar">
+    <div class="container fluid">
+        <h1 style="color: aliceblue;">Employee Details</h1>
+    </div>
+</nav>
+<div class="formtable">
+    <table class="table mt-3 table-bordered" >
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Mobile Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{contactData.id}}</td>
+                <td>{{contactData.name}}</td>
+                <td>{{contactData.email}}</td>
+                <td>{{contactData.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="btn"  routerLink='' id="btn-view1">Back</button>

@@ -1,0 +1,14 @@
+
+.navbar{
+    background-color: green;
+}
+.btn{
+    background-color: green;
+    margin:10px;
+    color: white;
+}
+
+.formtable{
+    margin:5%;
+    padding:10px;
+}
